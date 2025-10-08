@@ -1,0 +1,12 @@
+terraform init
+terraform validate
+terraform plan -out s3variable.tfplan
+terraform apply "s3variable.tfplan"
+
+terraform output      --  is used to extract the value of an output variable from the state file.
+terraform show -json  --  The terraform show command is used to provide human-readable output from a state or plan file.
+terraform state list  --  will list all resources
+terraform state show "aws_s3_bucket.mybucket" -- Display single resource details
+
+
+terraform destroy
